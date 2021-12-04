@@ -1,3 +1,17 @@
 h1 {
-  color: aqua;
+  color: #6062eb;
+}
+h2 {
+  font-weight: lighter;
+}
+.col {
+  text-align: center;
+}
+body {
+  border: 3px solid #6062eb;
+  margin: 20px 50px 20px 50px;
+  border-radius: 8px;
+}
+.currentTemp {
+  color: red;
 }

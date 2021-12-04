@@ -16,9 +16,61 @@
 
   <body>
     <div class="container">
-      <h1>hello</h1>
-      <a href="" class="btn btn-primary">Click me</a>
+      <h1>Weather App</h1>
+      <form id="temp-search">
+        <input
+          type="text"
+          placeholder="Enter a city"
+          autocomplete="off"
+          id="city-name"
+        />
+        <input type="submit" value="Search" />
+      </form>
+      <h1>Lawton</h1>
+      <h3></h3>
+      <h2>
+        Current temperature:
+        <div class="currentTemp">78°</div>
+        <br />
+        Low: 52°
+      </h2>
+      <div class="row">
+        <div class="col">☀️</div>
+        <div class="col">🌤</div>
+        <div class="col">🌤</div>
+        <div class="col">☀️</div>
+        <div class="col">☀️</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <strong> Monday</strong>
+          <div class="row">
+            <div class="col">H:75° L:43°</div>
+          </div>
+        </div>
+        <div class="col">
+          <strong> Tuesday</strong>
+          <div class="row"><div class="col">H:79° L:54°</div></div>
+        </div>
+        <div class="col">
+          <strong> Wednesday</strong>
+          <div class="row">
+            <div class="col">H:76° L:50°</div>
+          </div>
+        </div>
+        <div class="col">
+          <strong> Thursday</strong>
+          <div class="row"><div class="col">H:82° L:52°</div></div>
+        </div>
+        <div class="col">
+          <strong> Friday</strong>
+          <div class="row">
+            <div class="col">H:82° L:55°</div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>
