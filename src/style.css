@@ -7,11 +7,13 @@ h2 {
 .col {
   text-align: center;
 }
-body {
-  border: 3px solid #6062eb;
-  margin: 20px 50px 20px 50px;
-  border-radius: 8px;
-}
+
 .currentTemp {
   color: red;
+}
+.weatherapp {
+  border: 3px solid #6062eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
 }
