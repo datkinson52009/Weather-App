@@ -45,19 +45,33 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "462d1f08d569f95ec1f23ff00bbaacc6";
-let units = "metric";
-let city = "Lawton";
+function search(city) {
+  let apiKey = "462d1f08d569f95ec1f23ff00bbaacc6";
+  let units = "metric";
 
-let apiUrl =
-  "https://api.openweathermap.org/data/2.5/weather?q=" +
-  city +
-  "&appid=" +
-  apiKey +
-  "&units=" +
-  units;
+  let apiUrl =
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    city +
+    "&appid=" +
+    apiKey +
+    "&units=" +
+    units;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function updateCity(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-name");
+  search(cityInputElement.value);
+  // console.log(cityInputElement.value);
+}
+
+//let city = "Lawton";
+search("Lawton");
+
+let form = document.querySelector("#temp-search");
+form.addEventListener("submit", updateCity);
 
 // let now = new Date();
 // let h3 = document.querySelector("h3");

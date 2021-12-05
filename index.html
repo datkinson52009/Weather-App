@@ -16,15 +16,22 @@
   </head>
   <body>
     <div class="container">
-      <divv class="weatherapp">
-      <form id="temp-search">
+      <div class="weatherapp">
+      <form id="temp-search" class = "tempForm">
+        <div class="row"> 
+          <div class="col-9">
         <input
           type="text"
           placeholder="Enter a city"
           autocomplete="off"
           id="city-name"
+          class = "form-control"
         />
-        <input type="submit" value="Search" />
+      </div>
+    <div class = "col-3"> 
+        <input type="submit" value="Search" class = "btn btn-primary" />
+      </div>
+      </div>
       </form>
 
       <h1 id="city"> </h1>
