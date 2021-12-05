@@ -11,9 +11,32 @@ h2 {
 .currentTemp {
   color: red;
 }
-.weatherapp {
+ul {
+  list-style-type: none;
+}
+weatherapp {
+  max-width: 600px;
   border: 3px solid #6062eb;
   border-radius: 8px;
   padding: 20px;
   margin-top: 20px;
+}
+.weather-temperature img {
+  margin-right: 10px 0;
+  position: relative;
+  top: -18px;
+}
+
+.weather-temperature strong {
+  color: #212121;
+  font-weight: 400;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1;
+}
+.weather-temperature span {
+  position: relative;
+  font-size: 20px;
+  top: -45px;
 }
