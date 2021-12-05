@@ -1,27 +1,51 @@
 h1 {
   color: #6062eb;
 }
-
-li {
-  list-style-type: none;
-  line-height: normal;
+h2 {
+  font-weight: lighter;
 }
-.description {
-  padding: 0px;
+h3 {
+  font-size: 20px;
+}
+.col {
+  text-align: center;
+}
+.container {
+  border: 3px solid #6062eb;
+  margin: 20px 50px 20px 50px;
+  border-radius: 8px;
+  max-width: 600px;
 }
 .weatherapp {
-  max-width: 600px;
-  border: 3px solid #6062eb;
-  border-radius: 8px;
-  padding: 20px;
-  margin-top: 20px;
+}
+.currentTemp {
+  display: inline;
+}
+.humidity {
+  font-size: 15px;
+}
+.wind {
+  font-size: 15px;
+}
+button {
+  background-color: #6062eb;
+  color: white;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 .weather-temperature img {
   margin-right: 10px 0;
   position: relative;
   top: -18px;
 }
-
 .weather-temperature strong {
   color: #212121;
   font-weight: 400;
