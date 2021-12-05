@@ -1,9 +1,12 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
+  let morning = "AM";
+  let afternoon = "PM";
   if (hours < 10) {
     hours = "0" + hours;
   }
+
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = "0" + minutes;
@@ -18,7 +21,13 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return day + " " + hours + ":" + minutes;
+  if (hours > 11) {
+    return day + " " + hours + ":" + minutes + " " + afternoon;
+  }
+  if (hours < 12) {
+    return day + " " + hours + ":" + minutes + " " + morning;
+  }
+  //return day + " " + hours + ":" + minutes;
 }
 
 function displayTemperature(response) {
@@ -43,7 +52,7 @@ function displayTemperature(response) {
     event.preventDefault();
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
   }
-  //let celciusElement = document.querySelector("#celcius");
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
