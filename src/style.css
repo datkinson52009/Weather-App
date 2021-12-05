@@ -14,10 +14,9 @@ h3 {
   border: 3px solid #6062eb;
   margin: 20px 50px 20px 50px;
   border-radius: 8px;
-  max-width: 600px;
+  max-width: 650px;
 }
-.weatherapp {
-}
+
 .currentTemp {
   display: inline;
 }

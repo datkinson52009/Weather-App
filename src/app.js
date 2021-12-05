@@ -18,11 +18,10 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return day + " " + hours + " " + minutes;
+  return day + " " + hours + ":" + minutes;
 }
 
 function displayTemperature(response) {
-  console.log(response.data.weather[0].icon);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -30,6 +29,21 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+  let fahrenheitElement = document.querySelector("#fahrenheit");
+  fahrenheitElement.addEventListener("click", convertToFahrenheit);
+  let celciusElement = document.querySelector("#celcius");
+  celciusElement.addEventListener("click", convertToCelcius);
+  function convertToFahrenheit(event) {
+    event.preventDefault();
+    temperatureElement.innerHTML = Math.round(
+      Math.round(response.data.main.temp) * 1.8 + 32
+    );
+  }
+  function convertToCelcius(event) {
+    event.preventDefault();
+    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  }
+  //let celciusElement = document.querySelector("#celcius");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -64,7 +78,6 @@ function updateCity(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-name");
   search(cityInputElement.value);
-  // console.log(cityInputElement.value);
 }
 
 //let city = "Lawton";
