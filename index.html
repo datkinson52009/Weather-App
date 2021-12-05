@@ -27,37 +27,29 @@
         <input type="submit" value="Search" />
       </form>
 
-      <h1>City Name</h1>
+      <h1 id="city"> </h1>
       <h3></h3>
-      <ul class = "description">
+      <ul class = "overview">
         <li>Day and time</li>
-        <li>cloudy</li>
+        <li id="description"> </li>
       </ul>
       <div class="row">
         <div class="col-6">
           <div class="clearfix weather-temperature">
             <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy" class="float-left"
 />
-<strong>12</strong><span>C F</span>        
+<strong id="temperature"> </strong><span>C F</span>        
   </div>
         </div>
       <div class="col-6">
         <ul>
-          <li>Humidity: 55%</li>
-          <li>Wind</li>
+          <li>Humidity: <span id="humidity"> </span>%</li>
+          <li>Wind Speed: <span id="wind"> </span> Km/H</li>
         </ul>
       </div>
     </div>
   </div>
-      <h2>
-        Current temperature:
-        <div class="currentTemp">--°</div>
-        <br />
-        <div class="low">Low: --°</div>
-        <br />
-        <div class="humidity">Humidity: --%</div>
-        <div class="wind">Wind speed: -- km/h</div>
-      </h2>
+      
     </div>
     <small>
       <a href = "https://github.com/datkinson52009/Weather-App" target = "_blank">Open-source code</a>
