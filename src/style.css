@@ -12,9 +12,10 @@ h3 {
 }
 .container {
   border: 3px solid #6062eb;
-  margin: 20px 50px 20px 50px;
+  margin: 20px 50px 0px 50px;
   border-radius: 8px;
   max-width: 650px;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
 .currentTemp {
@@ -26,11 +27,6 @@ h3 {
 .wind {
   font-size: 15px;
 }
-button {
-  background-color: #6062eb;
-  color: white;
-}
-
 ul {
   padding: 0px;
   margin: 0px;
@@ -64,14 +60,23 @@ li {
   font-size: 20px;
   top: -45px;
 }
-
-#celcius:hover {
-  cursor: pointer;
-}
-#fahrenheit:hover {
-  cursor: pointer;
-}
-
 .tempForm {
   padding: 20px 10px 20px 0px;
+}
+.weather-temperature .active {
+  color: #212121;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+footer {
+  margin-left: 52px;
+  font-size: 10px;
+}
+.btn {
+  background-color: #6062eb;
 }

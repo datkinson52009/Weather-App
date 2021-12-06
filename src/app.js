@@ -42,14 +42,19 @@ function displayTemperature(response) {
   fahrenheitElement.addEventListener("click", convertToFahrenheit);
   let celciusElement = document.querySelector("#celcius");
   celciusElement.addEventListener("click", convertToCelcius);
+
   function convertToFahrenheit(event) {
     event.preventDefault();
+    celciusElement.classList.remove("active");
+    fahrenheitElement.classList.add("active");
     temperatureElement.innerHTML = Math.round(
       Math.round(response.data.main.temp) * 1.8 + 32
     );
   }
   function convertToCelcius(event) {
     event.preventDefault();
+    celciusElement.classList.add("active");
+    fahrenheitElement.classList.remove("active");
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
   }
 
