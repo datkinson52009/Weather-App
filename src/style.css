@@ -80,3 +80,18 @@ footer {
 .btn {
   background-color: #6062eb;
 }
+.weather-forecast {
+  text-align: center;
+}
+.weather-forecast .weather-forecast-low {
+  color: #6062eb;
+  opacity: 0.6;
+}
+.weather-forecast .weather-forecast-high {
+  color: #6062eb;
+  margin-right: 10px;
+}
+.weather-forecast img {
+  display: block;
+  margin: 10px auto;
+}
