@@ -27,42 +27,43 @@ function formatDate(timestamp) {
   if (hours < 12) {
     return day + " " + hours + ":" + minutes + " " + morning;
   }
-  //return day + " " + hours + ":" + minutes;
 }
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = "";
+  let forecastHTML = `<div class ="row">`;
 
   forecastHTML =
     forecastHTML +
     `
-  <div class="row">
   <div class="col-2">
-<div class="weather-forecast-day">Thurs <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" width="50px"></div>
+<div class="weather-forecast-day">Thurs 
+  <img src="http://openweathermap.org/img/wn/01d@2x.png" 
+  alt="" width="50px"></div>
+  <div class ="weather-forecast-temperatures">
 <span class ="weather-forecast-high">30°</span> 
 <span class="weather-forecast-low">0°</span>
+</div>
   </div>
-</div>
-</div>
+
 `;
 
   forecastHTML =
     forecastHTML +
     `
-  <div class="row">
   <div class="col-2">
 <div class="weather-forecast-day">Thurs <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" width="50px"></div>
+<div class ="weather-forecast-temperatures">
 <span class ="weather-forecast-high">30°</span> 
 <span class="weather-forecast-low">0°</span>
+</div>
   </div>
-</div>
-</div>
-`;
 
+
+`;
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  //forecastElement.innerHTML + forecastElement.innerHTML;
 }
 
 function displayTemperature(response) {
