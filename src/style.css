@@ -17,7 +17,6 @@ h3 {
   max-width: 650px;
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
-
 .currentTemp {
   display: inline;
 }

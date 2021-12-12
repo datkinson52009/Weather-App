@@ -17,63 +17,60 @@
   <body>
     <div class="container">
       <div class="weatherapp">
-      <form id="temp-search" class = "tempForm">
-        <div class="row"> 
-          <div class="col-9">
-        <input
-          type="text"
-          placeholder="Enter a city"
-          autocomplete="off"
-          id="city-name"
-          class = "form-control"
-        />
-      </div>
-    <div class = "col-3"> 
-        <input type="submit" value="Search" class = "btn btn-primary" />
-      </div>
-      </div>
-      </form>
-
-      <h1 id="city"> </h1>
-      <h3></h3>
-      <ul class = "overview">
-        <li>Last updated: <span id="date"></span></li>
-        <li id="description"> </li>
-      </ul>
-      <div class="row">
-        <div class="col-7">
-          <div class="clearfix weather-temperature">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy" id = "icon" class="float-left"
-/>
-<strong id="temperature"> </strong>
-<a href="#" id = "celcius" class = "active">°C</a> <span>|</span>
-<a href = "#" id = "fahrenheit">F</a>     
-  </div>
-        </div>
-      <div class="col-5">
-        <ul>
-          <li>Humidity: <span id="humidity"> </span>%</li>
-          <li>Wind Speed: <span id="wind"> </span> Km/H</li>
+        <form id="temp-search" class="tempForm">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="text"
+                placeholder="Enter a city"
+                autocomplete="off"
+                id="city-name"
+                class="form-control"
+              />
+            </div>
+            <div class="col-3">
+              <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+          </div>
+        </form>
+        <h1 id="city"></h1>
+        <h3></h3>
+        <ul class="overview">
+          <li>Last updated: <span id="date"></span></li>
+          <li id="description"></li>
         </ul>
+        <div class="row">
+          <div class="col-7">
+            <div class="clearfix weather-temperature">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                alt="cloudy"
+                id="icon"
+                class="float-left"
+              />
+              <strong id="temperature"> </strong>
+              <a href="#" id="celcius" class="active">°C</a> <span>|</span>
+              <a href="#" id="fahrenheit">F</a>
+            </div>
+          </div>
+          <div class="col-5">
+            <ul>
+              <li>Humidity: <span id="humidity"> </span>%</li>
+              <li>Wind Speed: <span id="wind"> </span> Km/H</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="weather-forecast">
-    <div class="row">
-      <div class="col-2">
-<div class="weather-forecast-day">Thur <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" width="50px"></div>
-<span class ="weather-forecast-high">30°</span> 
-<span class="weather-forecast-low">0°</span>
-      </div>
-    </div>
-  </div>
-    </div>
-    
-    <footer>
-      <a href = "https://github.com/datkinson52009/Weather-App" target = "_blank">Open-source code</a>
-by Dimitri Atkinson    </footer>
-  </div>
 
+      <div class="weather-forecast" id="forecast"></div>
+
+      <footer>
+        <a href="https://github.com/datkinson52009/Weather-App" target="_blank"
+          >Open-source code</a
+        >
+        by Dimitri Atkinson
+      </footer>
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
